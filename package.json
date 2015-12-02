@@ -25,5 +25,8 @@
     "lodash": "^3.10.1",
     "phantomjs": "^1.9.19",
     "protractor": "^3.0.0"
+  },
+  "dependencies": {
+    "http-server": "^0.8.5"
   }
 }
