@@ -1,11 +1,11 @@
 // Karma configuration
-// Generated on Tue Dec 01 2015 17:55:35 GMT+0000 (GMT)
+// Generated on Thu Nov 27 2014 10:43:21 GMT+0000 (GMT)
 
 module.exports = function(config) {
   config.set({
 
     // base path that will be used to resolve all patterns (eg. files, exclude)
-    basePath: '',
+    basePath: '../',
 
 
     // frameworks to use
@@ -15,18 +15,22 @@ module.exports = function(config) {
 
     // list of files / patterns to load in the browser
     files: [
+      'bower_components/angular/angular.js',
+      'bower_components/angular-route/angular-route.js',
+      'bower_components/angular-resource/angular-resource.js',
+      'bower_components/angular-mocks/angular-mocks.js',
+      'js/**/*.js',
+      'test/**/*.spec.js'
     ],
 
 
     // list of files to exclude
-    exclude: [
-    ],
+    exclude: [],
 
 
     // preprocess matching files before serving them to the browser
     // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
-    preprocessors: {
-    },
+    preprocessors: {},
 
 
     // test results reporter to use
@@ -54,15 +58,11 @@ module.exports = function(config) {
 
     // start these browsers
     // available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
-    browsers: ['Chrome'],
+    browsers: ['PhantomJS'],
 
 
     // Continuous Integration mode
     // if true, Karma captures browsers, runs the tests and exits
-    singleRun: false,
-
-    // Concurrency level
-    // how many browser should be started simultanous
-    concurrency: Infinity
-  })
-}
+    singleRun: false
+  });
+};
